@@ -19,4 +19,9 @@ class Event extends Model
         'time',
         'is_active',
     ];
+
+    public function eventParticipants()
+    {
+        return $this->hasMany(EventParticipant::class);
+    }
 }
